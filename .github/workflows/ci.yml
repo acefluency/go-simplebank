@@ -39,10 +39,10 @@ jobs:
     - name: Install golang-migrate
       uses: |
        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.17.1/migrate.linux-amd64.tar.gz | tar xvz
-       sudo mv migrate.linux-amd64.deb /usr/bin/migrate
+       sudo mv migrate.linux-amd64 /usr/bin/migrate
        which migrate
 
-    - name: Run Migration
+    - name: Run Migrations
       run: make migrateup
 
     - name: Get Dependencies
